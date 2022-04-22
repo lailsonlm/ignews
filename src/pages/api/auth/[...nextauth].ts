@@ -13,6 +13,7 @@ export default NextAuth({
       scope: 'read:user'
     }),
   ],
+  secret: process.env.NEXTAUTH_URL,
   callbacks: {
     async session(session) {
       try {
