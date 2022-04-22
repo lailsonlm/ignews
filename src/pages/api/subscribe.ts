@@ -61,7 +61,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       mode: 'subscription',
       allow_promotion_codes: true,
       success_url: 'https://ignews-lailsonlm.vercel.app/posts',
-      cancel_url: process.env.STRIPE_CANCEL_URL,
+      cancel_url: 'https://ignews-lailsonlm.vercel.app',
     })
 
     return res.status(200).json({ sessionId: stripeCheckoutSession.id })
